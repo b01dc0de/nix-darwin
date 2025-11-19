@@ -23,6 +23,7 @@
     neovide
     obsidian
     raycast
+    rectangle
     spotify
     vim
     vscode
