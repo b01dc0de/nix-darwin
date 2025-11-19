@@ -16,14 +16,7 @@
     };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, homebrew-core, homebrew-cask }:
-  let additionalCfg = { pkgs, ... }:
-  {
-    # Set Git commit hash for darwin-version.
-    system.configurationRevision = self.rev or self.dirtyRev or null;
-  };
-  in
-  {
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, homebrew-core, homebrew-cask }: {
     # $ darwin-rebuild build --flake .
     darwinConfigurations.ecuador = nix-darwin.lib.darwinSystem {
       modules = [
@@ -42,8 +35,11 @@
         } ({config, ... }: {
           homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
         })
-        additionalCfg
         ./configuration.nix
+        {
+          # Set Git commit hash for darwin-version.
+          system.configurationRevision = self.rev or self.dirtyRev or null;
+        }
       ];
     };
   };
