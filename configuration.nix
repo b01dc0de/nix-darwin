@@ -7,14 +7,22 @@
   # Allow unfree software:
   nixpkgs.config.allowUnfree = true;
 
+  # Users:
+  users.users.cka = {
+    name = "cka";
+    home = "/Users/cka";
+  };
+
   # Packages:
   environment.systemPackages = with pkgs; [
+    alt-tab-macos
     fastfetch
     firefox
     git
     neovim
     neovide
     obsidian
+    raycast
     spotify
     vim
     vscode
