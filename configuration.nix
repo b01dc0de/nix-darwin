@@ -36,6 +36,7 @@
     ];
     casks = [
       "chromium"
+      "karabiner-elements"
       "ghostty"
     ];
     masApps = { };
