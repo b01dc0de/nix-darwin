@@ -66,13 +66,7 @@
     autohide-time-modifier = 0.2;
     expose-animation-duration = 0.2;
     launchanim = false;
-    persistent-apps = [
-      "/Applications/Ghostty.app"
-      "${pkgs.firefox}/Applications/Firefox.app"
-      "${pkgs.vscode}/Applications/Visual Studio Code.app"
-      "${pkgs.obsidian}/Applications/Obsidian.app"
-      "${pkgs.spotify}/Applications/Spotify.app"
-    ];
+    persistent-apps = [ ];
     show-recents = false;
     show-process-indicators = true;
     tilesize = 48;
