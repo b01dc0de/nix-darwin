@@ -36,11 +36,12 @@
       "mas"
     ];
     casks = [
-      "chromium"
       "karabiner-elements"
       "ghostty"
     ];
-    masApps = { };
+    masApps = {
+      "Xcode" = 497799835;
+    };
     onActivation.cleanup = "zap";
   };
 
