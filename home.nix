@@ -8,9 +8,6 @@
 
   home.packages = with pkgs; [];
 
-  # Ghostty:
-  home.file.".config/ghostty/config".source = ./cfg/ghostty/config;
-
   # Bash:
   programs.bash.enable = true;
   programs.bash.enableCompletion = true;
@@ -21,12 +18,6 @@
       la = "ls -lA --color=auto";
   };
 
-  # Oh My Posh:
-  #programs.oh-my-posh.enable = true;
-  #programs.oh-my-posh.enableZshIntegration = true;
-
-  # Zsh:
-  #programs.zsh.enable = true;
-  #programs.zsh.enableCompletion = true;
-  #programs.zsh.autosuggestion.enable = true;
+  # Ghostty:
+  home.file.".config/ghostty/config".source = ./cfg/ghostty/config;
 }

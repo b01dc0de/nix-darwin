@@ -16,9 +16,11 @@
   # Packages:
   environment.systemPackages = with pkgs; [
     alt-tab-macos
+    discord
     fastfetch
     firefox
     git
+    imhex
     neovim
     neovide
     obsidian
@@ -38,6 +40,7 @@
     casks = [
       "karabiner-elements"
       "ghostty"
+      "ungoogled-chromium"
     ];
     masApps = {
       "Xcode" = 497799835;
