@@ -21,6 +21,7 @@
     firefox
     git
     imhex
+    iterm2
     neovim
     neovide
     obsidian
@@ -39,7 +40,6 @@
     ];
     casks = [
       "karabiner-elements"
-      "ghostty"
       "ungoogled-chromium"
     ];
     masApps = {
