@@ -17,7 +17,4 @@
       ll = "ls -l --color=auto";
       la = "ls -lA --color=auto";
   };
-
-  # Ghostty:
-  home.file.".config/ghostty/config".source = ./cfg/ghostty/config;
 }

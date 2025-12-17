@@ -69,7 +69,9 @@
     autohide-time-modifier = 0.2;
     expose-animation-duration = 0.2;
     launchanim = false;
-    persistent-apps = [ ];
+    persistent-apps = [
+        "${pkgs.iterm2}/Applications/iTerm2.app"
+    ];
     show-recents = false;
     show-process-indicators = true;
     tilesize = 48;
