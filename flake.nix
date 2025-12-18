@@ -52,5 +52,36 @@
         }
       ];
     };
+
+    darwinConfigurations.galapagos = nix-darwin.lib.darwinSystem {
+      modules = [
+        nix-homebrew.darwinModules.nix-homebrew
+        {
+          nix-homebrew = {
+            enable = true;
+            enableRosetta = true;
+            user = "cka";
+            taps = {
+              "homebrew/homebrew-core" = homebrew-core;
+              "homebrew/homebrew-cask" = homebrew-cask;
+            };
+            mutableTaps = false;
+          };
+        } ({config, ... }: {
+          homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
+        })
+        ./configuration.nix
+        {
+          # Set Git commit hash for darwin-version.
+          system.configurationRevision = self.rev or self.dirtyRev or null;
+        }
+        home-manager.darwinModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.cka = ./home.nix;
+        }
+      ];
+    };
   };
 }

@@ -27,7 +27,7 @@
     obsidian
     raycast
     rectangle
-    spotify
+    #spotify
     vim
     vscode
   ];
